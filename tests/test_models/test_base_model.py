@@ -1,12 +1,28 @@
 #!/usr/bin/python3
+"""Define unit test for base model class
+"""
 from datetime import datetime
 import unittest
 from models.base_model import BaseModel
+import pep8
 
 
 class TestBaseClass(unittest.TestCase):
     """Representation of a set of tests for base model class
     """
+
+    def setUp(self):
+        """set up the test
+        """
+        pass
+
+    def test_pep8(self):
+        """Test to check pycodestyle
+        """
+        py_code_style = pep8.StyleGuide(quiet=True)
+        check = py_code_style.check_files(
+            ['models/base_model.py', 'tests/test_models/test_base_model.py'])
+        self.assertEqual(check.total_errors, 0, "Errors found")
 
     def test_type_of_id(self):
         """Test to check the type of id
