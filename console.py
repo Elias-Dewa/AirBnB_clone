@@ -151,6 +151,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             new_list = [str(obj) for key, obj in storage.all().items()]
             print(new_list)
+
     def do_count(self, line):
         """Counts the instances of a class.
         """
