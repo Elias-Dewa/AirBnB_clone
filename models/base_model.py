@@ -17,7 +17,8 @@ class BaseModel:
         if kwargs:
             for key, value in kwargs.items():
                 if key in ("update_at", "created_at"):
-                    kwargs[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    kwargs[key] = datetime.strptime(
+                        value, "%Y-%m-%dT%H:%M:%S.%f")
             self.__dict__ = kwargs
         else:
             self.id = str(uuid.uuid4())

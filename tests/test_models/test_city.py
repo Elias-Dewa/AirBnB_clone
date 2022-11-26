@@ -15,7 +15,6 @@ from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):
-
     """Test Cases for the City class."""
 
     def setUp(self):
@@ -28,7 +27,7 @@ class TestCity(unittest.TestCase):
         b = City()
         self.assertEqual(str(type(b)), "<class 'models.city.City'>")
         self.assertIsInstance(b, City)
-        self.assertTrue(issubclass(type(b), BaseModel))        
+        self.assertTrue(issubclass(type(b), BaseModel))
 
     def test_city_attributes(self):
         """Tests the attributes of City class."""
@@ -36,15 +35,16 @@ class TestCity(unittest.TestCase):
         o = City()
         for k, v in attributes.items():
             self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)            
-            
-   def test_pep8(self):
+            self.assertEqual(type(getattr(o, k, None)), v)
+
+    def test_pep8(self):
         """Test to check pycodestyle
         """
         py_code_style = pep8.StyleGuide(quiet=True)
         check = py_code_style.check_files(
             ['models/user.py', 'tests/test_models/test_user.py'])
         self.assertEqual(check.total_errors, 0, "Errors found")
+
 
 if __name__ == "__main__":
     unittest.main()
