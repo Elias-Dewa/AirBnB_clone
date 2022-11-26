@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for TestHBNBCommand class."""
 
+import json
 from console import HBNBCommand
 from models.engine.file_storage import FileStorage
 import unittest
@@ -115,7 +116,7 @@ EOF  all  count  create  destroy  help  quit  show  update
         self.assertEqual(s, f.getvalue())
 
     def test_do_quit(self):
-        """Tests quit commmand."""
+        """Tests quit command."""
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("quit")
         msg = f.getvalue()
@@ -128,7 +129,7 @@ EOF  all  count  create  destroy  help  quit  show  update
         self.assertEqual("", msg)
 
     def test_do_EOF(self):
-        """Tests EOF commmand."""
+        """Tests EOF command."""
         with patch('sys.stdout', new=StringIO()) as f:
             HBNBCommand().onecmd("EOF")
         msg = f.getvalue()
@@ -572,7 +573,7 @@ EOF  all  count  create  destroy  help  quit  show  update
                                       False, True)
 
     def help_test_update(self, classname, uid, attr, val, quotes, func):
-        """Tests update commmand."""
+        """Tests update command."""
         #  print("QUOTES", quotes)
         FileStorage._FileStorage__objects = {}
         if os.path.isfile("file.json"):
