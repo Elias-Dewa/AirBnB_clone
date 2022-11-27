@@ -37,6 +37,5 @@ class TestStateClass(unittest.TestCase):
         state = State()
         self.assertTrue(type(state.name) == str)
 
-
 if __name__ == '__main__':
     unittest.main()

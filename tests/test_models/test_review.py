@@ -39,6 +39,5 @@ class TestReviewClass(unittest.TestCase):
         self.assertTrue(type(review.user_id) == str)
         self.assertTrue(type(review.text) == str)
 
-
 if __name__ == '__main__':
     unittest.main()
