@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-"""Module for FileStorage class."""
+
+"""Module for FileStorage class.
+"""
+
 import datetime
 import json
 import os
 
 
 class FileStorage:
-
     """Class for storing and retrieving data"""
     __file_path = "file.json"
     __objects = {}
@@ -58,6 +60,7 @@ class FileStorage:
 
     def attributes(self):
         """Returns the valid attributes and their types for classname"""
+
         attributes = {
             "BaseModel":
                      {"id": str,

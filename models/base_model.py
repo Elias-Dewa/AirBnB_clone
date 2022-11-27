@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """Define a BaseModel class
 """
 
@@ -16,8 +17,9 @@ class BaseModel:
         """
         if kwargs:
             for key, value in kwargs.items():
-                if key in ("update_at", "created_at"):
-                    kwargs[key] = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                if key in ("updated_at", "created_at"):
+                    kwargs[key] = datetime.strptime(
+                        value, "%Y-%m-%dT%H:%M:%S.%f")
             self.__dict__ = kwargs
         else:
             self.id = str(uuid.uuid4())
@@ -31,7 +33,7 @@ class BaseModel:
         Returns:
             str: the string representation of the object
         """
-        return "[{}] ({}) {}".format(self.__class__, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
         """Updates the public instance attribute updated_at with the current datetime

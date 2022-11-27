@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-"""Module for the entry point of the command interpreter."""
-
+"""Module for the entry point of the command interpreter.
+"""
 
 import cmd
 from models.base_model import BaseModel
@@ -18,8 +18,8 @@ class HBNBCommand(cmd.Cmd):
         """Catch commands if nothing else matches then."""
         self._precmd(line)
 
-     def _precmd(self, line):
-            """Intercepts commands to test for class.syntax()"""
+    def _precmd(self, line):
+        """Intercepts commands to test for class.syntax()"""
         # print("PRECMD:::", line)
         match = re.search(r"^(\w*)\.(\w+)(?:\(([^)]*)\))$", line)
         if not match:
@@ -71,7 +71,7 @@ class HBNBCommand(cmd.Cmd):
                         value = attributes[attribute](value)
                     setattr(storage.all()[key], attribute, value)
                 storage.all()[key].save()
-    
+
     def do_EOF(self, line):
         """Handles End Of File character.
         """
