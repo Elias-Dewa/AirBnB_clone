@@ -18,14 +18,6 @@ class TestBaseClass(unittest.TestCase):
         """
         pass
 
-    def test_pep8(self):
-        """Test to check pycodestyle
-        """
-        py_code_style = pep8.StyleGuide(quiet=True)
-        check = py_code_style.check_files(
-            ['models/base_model.py', 'tests/test_models/test_base_model.py'])
-        self.assertEqual(check.total_errors, 0, "Errors found")
-
     def test_type_of_id(self):
         """Test to check the type of id
         """
@@ -95,6 +87,25 @@ class TestBaseClass(unittest.TestCase):
         self.assertTrue(type(my_model.id) == str)
         self.assertTrue(type(my_model.created_at) == datetime)
         self.assertTrue(type(my_model.updated_at) == datetime)
+
+    def test_pep8(self):
+        """Test to check python code style
+        """
+        py_code_style = pep8.StyleGuide(quiet=True)
+        check = py_code_style.check_files(
+            ['models/base_model.py', 'tests/test_models/test_base_model.py'])
+        self.assertEqual(check.total_errors, 0, "errors found.")
+
+    def test_doc_base_model_class(self):
+        """Test to check base model class documentation
+        """
+        self.assertTrue(len(BaseModel.__doc__) > 0)
+
+    def test_doc_amenity_methods(self):
+        """Test to check base_model's methods documentation
+        """
+        for method in dir(BaseModel):
+            self.assertTrue(len(method.__doc__) > 0)
 
 
 if __name__ == '__main__':
