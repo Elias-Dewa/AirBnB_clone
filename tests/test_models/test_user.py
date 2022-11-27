@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Define unit test for user class"""
-
-
+"""Define unit test for user class
+"""
 import unittest
 from models.user import User
 from models.base_model import BaseModel

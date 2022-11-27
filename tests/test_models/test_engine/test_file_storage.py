@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Define unit test for file storage class"""
-
-
+"""Define unit test for file storage class
+"""
 import os
 import unittest
 from models.engine import file_storage

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Define unit test for state class"""
-
-
+"""Define unit test for state class
+"""
 import unittest
 from models.state import State
 from models.base_model import BaseModel

@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Define unit test for review class"""
-
-
+"""Define unit test for review class
+"""
 import unittest
 from models.review import Review
 from models.base_model import BaseModel
