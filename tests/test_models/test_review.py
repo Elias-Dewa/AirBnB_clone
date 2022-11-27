@@ -33,29 +33,40 @@ class TestReview(unittest.TestCase):
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_8_instantiation(self):
+    def test_is_instance(self):
         """Tests instantiation of Review class."""
 
-        b = Review()
-        self.assertEqual(str(type(b)), "<class 'models.review.Review'>")
-        self.assertIsInstance(b, Review)
-        self.assertTrue(issubclass(type(b), BaseModel))
+        review = Review()
+        self.assertEqual(str(type(review)), "<class 'models.review.Review'>")
+        self.assertIsInstance(review, Review)
+        self.assertTrue(issubclass(type(review), BaseModel))
 
-    def test_8_attributes(self):
+    def test_attributes(self):
         """Tests the attributes of Review class."""
         attributes = storage.attributes()["Review"]
-        o = Review()
+        review = Review()
         for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
-    
+            self.assertTrue(hasattr(review, k))
+            self.assertEqual(type(getattr(review, k, None)), v)
+
     def test_pep8(self):
-        """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
+        """Testing python code style"""
+        py_code_style = pep8.StyleGuide(quiet=True)
         path_user = 'models/review.py'
-        result = pepstylecode.check_files([path_user])
+        result = py_code_style.check_files([path_user])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                         "errors found.")
+
+    def test_doc_review_class(self):
+        """Test to check review class documentation
+        """
+        self.assertTrue(len(Review.__doc__) > 0)
+
+    def test_doc_review_methods(self):
+        """Test to check review's methods documentation
+        """
+        for method in dir(Review):
+            self.assertTrue(len(method.__doc__) > 0)
 
 
 if __name__ == "__main__":

@@ -33,30 +33,41 @@ class TestAmenity(unittest.TestCase):
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_8_instantiation(self):
+    def test_is_instance(self):
         """Tests instantiation of Amenity class."""
 
-        b = Amenity()
-        self.assertEqual(str(type(b)), "<class 'models.amenity.Amenity'>")
-        self.assertIsInstance(b, Amenity)
-        self.assertTrue(issubclass(type(b), BaseModel))
+        amenity = Amenity()
+        self.assertEqual(str(type(amenity)),
+                         "<class 'models.amenity.Amenity'>")
+        self.assertIsInstance(amenity, Amenity)
+        self.assertTrue(issubclass(type(amenity), BaseModel))
 
-    def test_8_attributes(self):
+    def test_attributes(self):
         """Tests the attributes of Amenity class."""
         attributes = storage.attributes()["Amenity"]
-        o = Amenity()
+        amenity = Amenity()
         for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
-    
-    def test_pep8(self):
-        """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
-        path_user = 'models/amenity.py'
-        result = pepstylecode.check_files([path_user])
-        self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+            self.assertTrue(hasattr(amenity, k))
+            self.assertEqual(type(getattr(amenity, k, None)), v)
 
+    def test_pep8(self):
+        """Testing python code style"""
+        py_code_style = pep8.StyleGuide(quiet=True)
+        path_user = 'models/amenity.py'
+        result = py_code_style.check_files([path_user])
+        self.assertEqual(result.total_errors, 0,
+                         "errors found.")
+
+    def test_doc_amenity_class(self):
+        """Test to check amenity class documentation
+        """
+        self.assertTrue(len(Amenity.__doc__) > 0)
+
+    def test_doc_amenity_methods(self):
+        """Test to check amenity's methods documentation
+        """
+        for method in dir(Amenity):
+            self.assertTrue(len(method.__doc__) > 0)
 
 
 if __name__ == "__main__":

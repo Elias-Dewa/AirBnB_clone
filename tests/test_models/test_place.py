@@ -15,7 +15,6 @@ import pep8
 
 
 class TestPlace(unittest.TestCase):
-
     """Test Cases for the Place class."""
 
     def setUp(self):
@@ -33,29 +32,40 @@ class TestPlace(unittest.TestCase):
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_8_instantiation(self):
+    def test_is_instance(self):
         """Tests instantiation of Place class."""
 
-        b = Place()
-        self.assertEqual(str(type(b)), "<class 'models.place.Place'>")
-        self.assertIsInstance(b, Place)
-        self.assertTrue(issubclass(type(b), BaseModel))
+        place = Place()
+        self.assertEqual(str(type(place)), "<class 'models.place.Place'>")
+        self.assertIsInstance(place, Place)
+        self.assertTrue(issubclass(type(place), BaseModel))
 
-    def test_8_attributes(self):
+    def test_attributes(self):
         """Tests the attributes of Place class."""
         attributes = storage.attributes()["Place"]
-        o = Place()
+        place = Place()
         for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
-    
+            self.assertTrue(hasattr(place, k))
+            self.assertEqual(type(getattr(place, k, None)), v)
+
     def test_pep8(self):
-        """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
+        """Testing python code style"""
+        py_code_style = pep8.StyleGuide(quiet=True)
         path_user = 'models/place.py'
-        result = pepstylecode.check_files([path_user])
+        result = py_code_style.check_files([path_user])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
+                         "errors found.")
+
+    def test_doc_place_class(self):
+        """Test to check place class documentation
+        """
+        self.assertTrue(len(Place.__doc__) > 0)
+
+    def test_doc_place_methods(self):
+        """Test to check place's methods documentation
+        """
+        for method in dir(Place):
+            self.assertTrue(len(method.__doc__) > 0)
 
 
 if __name__ == "__main__":

@@ -15,7 +15,6 @@ import pep8
 
 
 class TestCity(unittest.TestCase):
-
     """Test Cases for the City class."""
 
     def setUp(self):
@@ -33,30 +32,40 @@ class TestCity(unittest.TestCase):
         if os.path.isfile(FileStorage._FileStorage__file_path):
             os.remove(FileStorage._FileStorage__file_path)
 
-    def test_8_instantiation(self):
+    def test_is_instance(self):
         """Tests instantiation of City class."""
 
-        b = City()
-        self.assertEqual(str(type(b)), "<class 'models.city.City'>")
-        self.assertIsInstance(b, City)
-        self.assertTrue(issubclass(type(b), BaseModel))
+        city = City()
+        self.assertEqual(str(type(city)), "<class 'models.city.City'>")
+        self.assertIsInstance(city, City)
+        self.assertTrue(issubclass(type(city), BaseModel))
 
-    def test_8_attributes(self):
+    def test_attributes(self):
         """Tests the attributes of City class."""
         attributes = storage.attributes()["City"]
-        o = City()
+        city = City()
         for k, v in attributes.items():
-            self.assertTrue(hasattr(o, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
-    
-     def testpep8(self):
-            """ testing codestyle """
-        pepstylecode = pep8.StyleGuide(quiet=True)
+            self.assertTrue(hasattr(city, k))
+            self.assertEqual(type(getattr(city, k, None)), v)
+
+    def test_pep8(self):
+        """Testing python code style"""
+        py_code_style = pep8.StyleGuide(quiet=True)
         path_user = 'models/city.py'
-        result = pepstylecode.check_files([path_user])
+        result = py_code_style.check_files([path_user])
         self.assertEqual(result.total_errors, 0,
-                         "Found code style errors (and warnings).")
-    
+                         "errors found.")
+
+    def test_doc_city_class(self):
+        """Test to check city class documentation
+        """
+        self.assertTrue(len(City.__doc__) > 0)
+
+    def test_doc_city_methods(self):
+        """Test to check city's methods documentation
+        """
+        for method in dir(City):
+            self.assertTrue(len(method.__doc__) > 0)
 
 if __name__ == "__main__":
     unittest.main()
