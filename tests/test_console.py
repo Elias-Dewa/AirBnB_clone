@@ -14,6 +14,7 @@ import os
 
 
 class TestHBNBCommand(unittest.TestCase):
+
     """Tests HBNBCommand console."""
 
     attribute_values = {
