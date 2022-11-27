@@ -68,56 +68,69 @@ All tests should also pass in non-interactive mode: $ echo "python3 -m unittest 
 
 ![image](https://user-images.githubusercontent.com/54449260/203246511-e38d5cab-e469-450f-a878-aaf94c2561f2.png)
 
-Format of Command Input
-In order to give commands to the console, these will need to be piped through an echo in case of Non-interactive mode.
+## Format of Command Input
 
-In Interactive Mode the commands will need to be written with a keyboard when the prompt appears and will be recognized when an enter key is pressed (new line). As soon as this happens, the console will attempt to execute the command through several means or will show an error message if the command didn't run successfully. In this mode, the console can be exited using the CTRL + D combination, CTRL + C, or the command quit or EOF.
+In order to give commands to the console, these will need to be piped through an echo in case of **Non-interactive mode**.
 
-Arguments
+In **Interactive Mode** the commands will need to be written with a keyboard when the prompt appears and will be recognized when an enter key is pressed (new line). As soon as this happens, the console will attempt to execute the command through several means or will show an error message if the command didn't run successfully. In this mode, the console can be exited using the **CTRL + D** combination, **CTRL + C**, or the command **quit** or **EOF**.
+
+## Arguments
+
 Most commands have several options or arguments that can be used when executing the program. In order for the Shell to recognize those parameters, the user must separate everything with spaces.
 
 Example:
+
+```
 
 user@ubuntu:~/AirBnB$ ./console.py
 (hbnb) create BaseModel
 49faff9a-6318-451f-87b6-910505c55907
 user@ubuntu:~/AirBnB$ ./console.py
 
+```
+
 or
 
+```
 user@ubuntu:~/AirBnB$ ./console.py $ echo "create BaseModel" | ./console.py
 (hbnb)
 e37ebcd3-f8e1-4c1f-8095-7a019070b1fa
 (hbnb)
 user@ubuntu:~/AirBnB$ ./console.py
-Available commands and what they do
+```
+
+## Available commands and what they do
+
 The recognizable commands by the interpreter are the following:
 
-Command Description
-quit or EOF Exits the program
-Usage By itself
------ -----
-help Provides a text describing how to use a command.
-Usage By itself --or-- help <command>
------ -----
-create Creates a new instance of a valid Class, saves it (to the JSON file) and prints the id. Valid classes are: BaseModel, User, State, City, Amenity, Place, Review.
-Usage create <class name>
------ -----
-show Prints the string representation of an instance based on the class name and id
-Usage show <class name> <id> --or-- <class name>.show(<id>)
------ -----
-destroy Deletes an instance based on the class name and id (saves the change into a JSON file).
-Usage destroy <class name> <id> --or-- .destroy()
------ -----
-all Prints all string representation of all instances based or not on the class name.
-Usage By itself or all <class name> --or-- <class name>.all()
------ -----
-update Updates an instance based on the class name and id by adding or updating attribute (saves the changes into a JSON file).
-Usage update <class name> <id> <attribute name> "<attribute value>" ---or--- <class name>.update(<id>, <attribute name>, <attribute value>) --or-- <class name>.update(<id>, <dictionary representation>)
------ -----
-count Retrieve the number of instances of a class.
-Usage <class name>.count()
+| Command         | Description                                                                                                                                                                                                                |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **quit or EOF** | Exits the program                                                                                                                                                                                                          |
+| **Usage**       | By itself                                                                                                                                                                                                                  |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **help**        | Provides a text describing how to use a command.                                                                                                                                                                           |
+| **Usage**       | By itself --or-- **help <command\>**                                                                                                                                                                                       |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **create**      | Creates a new instance of a valid `Class`, saves it (to the JSON file) and prints the `id`. Valid classes are: BaseModel, User, State, City, Amenity, Place, Review.                                                       |
+| **Usage**       | **create <class name\>**                                                                                                                                                                                                   |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **show**        | Prints the string representation of an instance based on the class name and `id`                                                                                                                                           |
+| **Usage**       | **show <class name\> <id\>** --or-- **<class name\>.show(<id\>)**                                                                                                                                                          |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **destroy**     | Deletes an instance based on the class name and `id` (saves the change into a JSON file).                                                                                                                                  |
+| **Usage**       | **destroy <class name\> <id\>** --or-- **<class name>.destroy(<id>)**                                                                                                                                                      |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **all**         | Prints all string representation of all instances based or not on the class name.                                                                                                                                          |
+| **Usage**       | By itself or **all <class name\>** --or-- **<class name\>.all()**                                                                                                                                                          |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **update**      | Updates an instance based on the class name and `id` by adding or updating attribute (saves the changes into a JSON file).                                                                                                 |
+| **Usage**       | **update <class name\> <id\> <attribute name\> "<attribute value\>"** ---or--- **<class name\>.update(<id\>, <attribute name\>, <attribute value\>)** --or-- **<class name\>.update(<id\>, <dictionary representation\>)** |
+| **-----**       | **-----**                                                                                                                                                                                                                  |
+| **count**       | Retrieve the number of instances of a class.                                                                                                                                                                               |
+| **Usage**       | **<class name\>.count()**                                                                                                                                                                                                  |
 
-Authors
-Amanuel Fenta Dejen <amanuelf44@gmail.com>
-Elias-Dewa <elias.dewa19@gmail.com>
+## Authors
+
+Amanuel Fenta| Githhub: [Amanuel2000](mailto:amanuelf44@gmail.com)
+
+Elias-Dewa | Github: [Elias-Dewa](mailto:elias.dewa19@gmail.com)
