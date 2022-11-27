@@ -11,6 +11,7 @@ from models.engine.file_storage import FileStorage
 import os
 from models import storage
 from models.base_model import BaseModel
+import pep8
 
 
 class TestCity(unittest.TestCase):
@@ -47,7 +48,15 @@ class TestCity(unittest.TestCase):
         for k, v in attributes.items():
             self.assertTrue(hasattr(o, k))
             self.assertEqual(type(getattr(o, k, None)), v)
-
+    
+     def testpep8(self):
+            """ testing codestyle """
+        pepstylecode = pep8.StyleGuide(quiet=True)
+        path_user = 'models/city.py'
+        result = pepstylecode.check_files([path_user])
+        self.assertEqual(result.total_errors, 0,
+                         "Found code style errors (and warnings).")
+    
 
 if __name__ == "__main__":
     unittest.main()
