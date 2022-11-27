@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 """Define unit test for state class
 """
+
 import unittest
 from models.state import State
 from models.base_model import BaseModel
@@ -35,6 +37,7 @@ class TestStateClass(unittest.TestCase):
         """
         state = State()
         self.assertTrue(type(state.name) == str)
+
 
 if __name__ == '__main__':
     unittest.main()

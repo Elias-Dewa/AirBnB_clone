@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+
 """Define unit test for review class
 """
+
 import unittest
 from models.review import Review
 from models.base_model import BaseModel
@@ -37,6 +39,7 @@ class TestReviewClass(unittest.TestCase):
         self.assertTrue(type(review.place_id) == str)
         self.assertTrue(type(review.user_id) == str)
         self.assertTrue(type(review.text) == str)
+
 
 if __name__ == '__main__':
     unittest.main()
