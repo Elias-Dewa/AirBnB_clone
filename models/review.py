@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""Define review class that inherits from BaseModel class
-"""
+"""This module creates a Review class"""
+
 from models.base_model import BaseModel
 
 
 class Review(BaseModel):
-    """Public instance of review class
-    """
+    """Class for managing review objects"""
+
     place_id = ""
     user_id = ""
     text = ""
