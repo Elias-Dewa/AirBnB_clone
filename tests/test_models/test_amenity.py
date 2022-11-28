@@ -15,7 +15,6 @@ import pep8
 
 
 class TestAmenity(unittest.TestCase):
-
     """Test Cases for the Amenity class."""
 
     def setUp(self):
