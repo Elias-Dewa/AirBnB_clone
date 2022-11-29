@@ -44,9 +44,9 @@ class TestBaseClass(unittest.TestCase):
         model1 = BaseModel()
         model2 = BaseModel()
         model3 = BaseModel()
-        self.assertNotTrue(model1.id == model2.id)
-        self.assertNotTrue(model2.id == model3.id)
-        self.assertNotTrue(model3.id == model1.id)
+        self.assertTrue(model1.id != model2.id)
+        self.assertTrue(model2.id != model3.id)
+        self.assertTrue(model3.id != model1.id)
 
     def test_to_dict(self):
         """Test to check to_dict method

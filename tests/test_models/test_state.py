@@ -36,7 +36,7 @@ class TestState(unittest.TestCase):
         """Tests instantiation of State class."""
 
         state = State()
-        self.assertEqual(str(type(state)), "<class 'models.state.State'>")
+        self.assertEqual(str(type(state)), "<class 'state.State'>")
         self.assertIsInstance(state, State)
         self.assertTrue(issubclass(type(state), BaseModel))
 
@@ -46,7 +46,7 @@ class TestState(unittest.TestCase):
         state = State()
         for k, v in attributes.items():
             self.assertTrue(hasattr(state, k))
-            self.assertEqual(type(getattr(o, k, None)), v)
+            self.assertEqual(type(getattr(state, k, None)), v)
 
     def test_pep8(self):
         """Testing python code style"""

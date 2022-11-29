@@ -36,9 +36,9 @@ class TestUser(unittest.TestCase):
         """Tests instantiation of User class."""
 
         user = User()
-        self.assertEqual(str(type(user)), "<class 'models.user.User'>")
+        self.assertEqual(str(type(user)), "<class 'user.User'>")
         self.assertIsInstance(user, User)
-        self.assertTrue(issubclass(type(suer), BaseModel))
+        self.assertTrue(issubclass(type(user), BaseModel))
 
     def test_attributes(self):
         """Tests the attributes of User class."""

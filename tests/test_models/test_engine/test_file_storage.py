@@ -32,13 +32,13 @@ class TestFileStorageClass(unittest.TestCase):
     def test_is_instance(self):
         """Test to check that the storage is instance
         """
-        self.assertTrue(isinstance(storage, FileStorage))
+        self.assertIsInstance(storage, FileStorage)
 
     def test_all(self):
         """Test to check the type of method all from file storage
         """
         file_stor = FileStorage()
-        self.assertTrue(type(file_stor.all()) == str)
+        self.assertTrue(type(file_stor.all()) == dict)
 
     def test_new(self):
         """Test to check the new method
