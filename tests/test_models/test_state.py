@@ -36,7 +36,7 @@ class TestState(unittest.TestCase):
         """Tests instantiation of State class."""
 
         state = State()
-        self.assertEqual(str(type(state)), "<class 'state.State'>")
+        self.assertEqual(str(type(state)), "<class 'models.state.State'>")
         self.assertIsInstance(state, State)
         self.assertTrue(issubclass(type(state), BaseModel))
 

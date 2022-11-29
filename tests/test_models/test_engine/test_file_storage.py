@@ -58,7 +58,7 @@ class TestFileStorageClass(unittest.TestCase):
         file_stor.new(model)
         file_stor.save()
         dict1 = file_stor.all()
-        os.remove("test.json")
+        os.remove("file.json")
         file_stor.reload()
         dict2 = file_stor.all()
         self.assertEqual(dict1 == dict2)
