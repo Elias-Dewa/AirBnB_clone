@@ -21,14 +21,6 @@ class TestFileStorageClass(unittest.TestCase):
         """
         pass
 
-    def test_pep8(self):
-        """Test to check pycodestyle
-        """
-        py_code_style = pep8.StyleGuide(quiet=True)
-        check = py_code_style.check_files(
-            ['models/engine/file_storage.py', 'tests/test_models/test_engine/test_file_storage.py'])
-        self.assertEqual(check.total_errors, 0, "Errors found")
-
     def test_is_instance(self):
         """Test to check that the storage is instance
         """
