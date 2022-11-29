@@ -12,7 +12,7 @@ from models import storage
 import pep8
 
 
-class TestFileStorageClass(unittest.TestCase):
+class TestFileStorage(unittest.TestCase):
     """Representation of a set of tests for file storage class
     """
 
@@ -21,10 +21,18 @@ class TestFileStorageClass(unittest.TestCase):
         """
         pass
 
+    def test_pep8(self):
+        """Test to check pycodestyle
+        """
+        py_code_style = pep8.StyleGuide(quiet=True)
+        check = py_code_style.check_files(
+            ['models/engine/file_storage.py', 'tests/test_models/test_engine/test_file_storage.py'])
+        self.assertEqual(check.total_errors, 0, "Errors found")
+
     def test_is_instance(self):
         """Test to check that the storage is instance
         """
-        self.assertIsInstance(storage, FileStorage)
+        self.assertIsInstance(TestFileStorage.storage, FileStorage)
 
     def test_all(self):
         """Test to check the type of method all from file storage
