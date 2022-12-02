@@ -37,7 +37,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
 
 # More Info
 
-![image](https://s3.amazonaws.com/intranet-projects-files/concepts/74/hbnb_step1.png)
+![image](https://user-images.githubusercontent.com/54449260/205374822-ea892dfe-6112-430b-9254-3181026ed880.png)
 
 # Mandatory and advanced tasks
 
@@ -68,7 +68,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
         You are not allowed to use the style tag in the head tag
         Use inline styling for all your tags
 
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/98f4ac1b0644512ce7ae91a9e8e61e8fe174911d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=52abbed8cc7a7332848433f1743987caa80ab106897d735788f0592e4887cae0)
+![image](https://user-images.githubusercontent.com/54449260/205374884-79cf748e-cd60-4ae8-ab77-cf6f5c56472e.png)
 
 1. Head styling
 
@@ -133,7 +133,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/3-header.css: for the header style
             styles/3-footer.css: for the footer style
 
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/2be1eda05a0d9097c210f2d3482a59aa858c5711.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=b6814084254af965aa337b848c4f8851b894a9a0bf7fb52b60a3a5201f52d95c)
+![image](https://user-images.githubusercontent.com/54449260/205374935-e1797f95-0ae3-4bb0-b2bf-18cdb79361ee.png)
 
 4. Search!
 
@@ -182,7 +182,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/4-filters.css: for the filters style
         4-index.html won’t be W3C valid, don’t worry, it’s temporary
 
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/f959154b0cdf1cdf71ddef04e3787ef28462793e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=31536e8c874c458ab2df8e7ef9142f4a5a720319819a577a4a29f36674fcae9a)
+![image](https://user-images.githubusercontent.com/54449260/205374980-c38daec4-02b7-461d-bae8-217789192fb6.png)
 
 5. More filters
 
@@ -218,7 +218,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/3-header.css: for the header style
             styles/3-footer.css: for the footer style
             styles/5-filters.css: for the filters style
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/85bfa50b96c2985723daa75b5e22f75ef16e2b2e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=3950fe04597ea40b0323c8e13ed1886a4be1f2988a5ceb6edf89e87a5120b4e0)
+![image](https://user-images.githubusercontent.com/54449260/205375021-c00d13cc-4528-40bc-bce5-0df32f7b9382.png)
 
 6. It's (h)over
 
@@ -251,8 +251,9 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/3-header.css: for the header style
             styles/3-footer.css: for the footer style
             styles/6-filters.css: for the filters style
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/6262f13624dca23ca19db505c44f88faddb82ebb.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=68dc11fee39114210abee369c435bf65fddcd5a4a32f172ece7a19f660b56cad)
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/6e6bdfa13fa88a5f439d9e2b1dade826dd95529b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=c2b6e12e485c55c49fb94845e1ed350f20c16244e3b07ff63d56c765962beba3)
+![image](https://user-images.githubusercontent.com/54449260/205375087-f397553c-1536-411d-aa00-f6c6903f5bae.png)
+![image](https://user-images.githubusercontent.com/54449260/205375113-a3de9c0c-0a1c-4223-abd3-4b40f84213b5.png)
+
 
 7. Display results
 
@@ -291,7 +292,7 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/3-footer.css: for footer style
             styles/6-filters.css: for the filters style
             styles/7-places.css: for the places style
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/bca4d17fbe21a58b66a9d5d6b85df4801d147dd0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=bb61c0dc51dcedc6861ac6b024baa44c38cacac19c7fa1889eb7b6a9ff876c0c)
+![image](https://user-images.githubusercontent.com/54449260/205375156-41a17664-1d18-46b7-900e-df1a4856dc11.png)
 
 8. More details
 
@@ -356,4 +357,4 @@ Before starting, please fork or clone the repository AirBnB_clone from your part
             styles/3-footer.css: for the footer style
             styles/6-filters.css: for the filters style
             styles/8-places.css: for the places style
-![image](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2021/12/f4b2d4ef94bd3a2e7e1ddefa81236595686d270e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20221202%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221202T184950Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=4a76430d73455f6758df51b335c9d57febc6455f2909760d5e6cdb13c38548ea)
+![image](https://user-images.githubusercontent.com/54449260/205375199-42623baf-28d5-4e06-9d79-2da6af070676.png)
