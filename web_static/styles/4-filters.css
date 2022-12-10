@@ -5,9 +5,7 @@
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+    text-align: right;
 }
 /* For search button */
 button {
@@ -18,7 +16,7 @@ button {
     width: 20%;
     border: none;
     border-radius: 4px;
-    margin-right: 30px;
+    margin: 10px 30px 10px 0;
 }
 
 button:hover {

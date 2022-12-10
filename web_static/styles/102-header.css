@@ -1,0 +1,18 @@
+/* header section */
+header {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    background: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 20px;
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 60px;
+        background-position-x: 10px;
+    }
+}

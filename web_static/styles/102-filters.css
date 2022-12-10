@@ -1,5 +1,5 @@
 /* Filters section */
-.filters {
+.container .filters {
     background-color: white;
     height: 70px;
     width: 100%;
@@ -55,13 +55,15 @@ button {
 button:hover {
     opacity: 90%;
 }
+
 /* Dropdown */
 .popover {
     display: none;
     position: relative;
 }
 
-.locations:hover .popover, .amenities:hover .popover {
+.locations:hover .popover,
+.amenities:hover .popover {
     display: block;
     background-color: #FAFAFA;
     border: 1px solid #DDDDDD;
@@ -71,7 +73,8 @@ button:hover {
     padding-right: 10px;
 }
 
-.locations:hover .popover li, .amenities:hover .popover li {
+.locations:hover .popover li,
+.amenities:hover .popover li {
     list-style-type: none;
     margin: 20px 5px;
     padding-left: 0;
@@ -82,10 +85,33 @@ button:hover {
     margin-bottom: 0;
 }
 
-.locations:hover .popover ul, .amenities:hover .popover ul {
+.locations:hover .popover ul,
+.amenities:hover .popover ul {
     padding-left: 20px;
 }
-.locations:hover .popover ul li, .amenities:hover .popover ul li {
+
+.locations:hover .popover ul li,
+.amenities:hover .popover ul li {
     margin: 2px;
     padding-left: 0;
+}
+
+@media (max-width: 480px) {
+    .container .filters {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .locations {
+        width: 50%;
+    }
+    .amenities {
+        width: 40%;
+    }
+    button {
+        width: 100%;
+        margin-right: 10px;
+    }
 }

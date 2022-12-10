@@ -4,6 +4,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .places h1 {
     font-size: 30px;
     text-align: left;
@@ -78,20 +79,23 @@ article .description {
     line-height: 1.2;
 }
 
-article .amenities, article .reviews {
+article .amenities,
+article .reviews {
     margin-top: 40px;
     margin-bottom: 10px;
     width: 100%;
 }
 
-article .amenities h2, .reviews h2 {
+article .amenities h2,
+.reviews h2 {
     font-size: 16px;
     border-bottom: 1px solid #DDDDDD;
     width: 100%;
     text-align: left;
 }
 
-article .amenities ul, .reviews ul {
+article .amenities ul,
+.reviews ul {
     list-style-type: none;
     padding: 0;
     height: 130px;
@@ -104,14 +108,18 @@ article .amenities ul li {
 .amenities .tv {
     background: url("../images/icon_tv.png");
 }
+
 .amenities .wifi {
     background: url("../images/icon_wifi.png");
 }
+
 .amenities .pet {
     background: url("../images/icon_pets.png");
 }
 
-.amenities .tv, .amenities .wifi, .amenities .pet {
+.amenities .tv,
+.amenities .wifi,
+.amenities .pet {
     background-repeat: no-repeat;
     background-position: left;
     background-size: 30px;
@@ -129,4 +137,36 @@ article .amenities ul li {
 .reviews ul p {
     font-size: 12px;
     text-align: left;
+}
+
+@media (max-width: 480px) {
+    .places {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+    .places h1 {
+        width: 100%;
+    }
+    .places article {
+        margin: 5px 0;
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    article .price_by_night {
+        width: 60px;
+        margin: auto;
+    }
+    article .information {
+        display: flex;
+        justify-content: center;
+    }
+    article .user, article .description{
+        width: 100%;
+    }
 }
