@@ -1,0 +1,25 @@
+/* CSS for body */
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Container section */
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 5x;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
